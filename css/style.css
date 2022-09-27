@@ -6,12 +6,35 @@
 	border: none;
 	outline: none;
 }
+
 footer iframe{
 	width: 100%;
 	height: 300px;
+	background-color: #282D3D;
+}
+
+nav ul li p {
+	color: #fffefe;
+	font-size: small;
+	font: 'Karla';
+	font-weight: initial;
+}
+
+nav ul li h2 {
+	color: #fffefe;
+	font-size: normal;
+	font: 'Karla';
+	font-weight: initial;
+}
+
+header iframe p {
+	color: #fffefe;
 }
 
 header iframe{
 	width: 100%;
 	height: 300px;
+	background-color: #282D3D;
+	display: grid;
+
 }
