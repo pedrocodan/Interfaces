@@ -6,3 +6,12 @@
 	border: none;
 	outline: none;
 }
+footer iframe{
+	width: 100%;
+	height: 300px;
+}
+
+header iframe{
+	width: 100%;
+	height: 300px;
+}
