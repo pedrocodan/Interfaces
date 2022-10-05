@@ -801,7 +801,6 @@ h3{
 
 	.fatFooter{
 		flex-direction: row;
-		align-items: top;
 	  }
 
 	.fatFooter ul:last-child img:last-child, .fatFooter ul:first-child img{
