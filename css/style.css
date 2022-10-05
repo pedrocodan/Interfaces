@@ -348,14 +348,14 @@ header input::placeholder {
 /*Sección portada y carruseles*/
 
 .section-portada {
-    background-image: url(images/portada-mobile.jpg);
+    background-image: url(images/portada-mobile2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; 
     min-height: 550px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     opacity: 75%;
 }
 
@@ -384,7 +384,6 @@ header input::placeholder {
 
 #btn-info {
     background: rgba(185, 182, 188, 0.76);
-
     margin-right: 15%;
 }
 
@@ -394,16 +393,15 @@ header input::placeholder {
     text-shadow: 0px 1px 3px #FFFEFE;
     font-size: 25px;
     letter-spacing: 0.09em;
-    margin-right: 1%;
-    margin-top: 1%;
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 35px;
     line-height: 87px;
     text-align: center;
     text-transform: uppercase;
-    align-self: flex-end;
+    align-self: center;
+	margin-bottom: 20%;
 }
 
 .section-carruseles {
@@ -843,6 +841,16 @@ h3{
 		top: 25%;
 		left: 0%;
 		right: 10%;
+	}
+
+	.section-portada h1 {
+		font-size: 25px;
+		margin-right: 1%;
+		margin-top: 1%;
+		font-weight: 400;
+		font-size: 50px;
+		line-height: 87px;
+		align-self: flex-end;
 	}
 }
 
