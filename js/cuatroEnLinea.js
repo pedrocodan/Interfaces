@@ -1,9 +1,9 @@
 "use strict";
 
 var compartir = document.querySelector("#compartir");
-var redes = document.querySelector("#redes");
+var redesJuego = document.querySelector("#redesJuego");
 compartir.addEventListener("click", () => {
-    redes.classList.toggle("redes")});
+    redesJuego.classList.toggle("redesJuego")});
 
 
 
