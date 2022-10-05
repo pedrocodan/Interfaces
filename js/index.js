@@ -198,7 +198,7 @@ flechaizquierda2.addEventListener('click', () => {
     fila2.scrollLeft -= fila2.offsetWidth;
 
     const indicadoractivo = document.getElementById('indicadores-2').querySelector('.indicadores .activo');
-    if(indicadoractivo.previousSibling){
+    if(indicadoractivo.previousSibling) {
         indicadoractivo.previousSibling.classList.add('activo');
         indicadoractivo.classList.remove('activo');
     }
