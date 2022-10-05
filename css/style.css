@@ -996,7 +996,6 @@ h3{
 .juegos-mostrados .contenedor-carrusel .carrusel .juego {
 	min-width: 50%; /* Para tomar el tamaño de imagenes por pantalla */
 	transition: .3s ease all;
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 	border-radius: 9px;
 
 }
@@ -1006,10 +1005,10 @@ h3{
 }
 
 .juegos-mostrados .contenedor-carrusel .carrusel .juego img {
-	width: 100%;
-	min-height: 100%;
+	max-width: 100%;
+	max-height: 95%;
 	vertical-align: top;
-	padding: 0 4px;
+	padding: 0 3px;
 	border-radius: 9px;
 	
 }
