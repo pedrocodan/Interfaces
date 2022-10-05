@@ -403,3 +403,20 @@ header input::placeholder {
 .section-carruseles {
     background-color: #1D1824;
 }
+
+@media screen and (min-width: 480px) {
+    .section-portada {
+        background-image: url(images/portada.jpg);
+    }
+
+    .section-portada div {
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .section-portada div #btn-avisame, .section-portada div #btn-info {
+        margin-left: 7%;
+        margin-right: 7%;
+
+    }
+}
