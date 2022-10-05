@@ -821,6 +821,7 @@ h3{
     .section-portada {
         background-image: url(images/portada.jpg);
         background-size: cover;
+			justify-content: space-between;
     }
 
     .section-portada div {
@@ -851,7 +852,11 @@ h3{
 		font-size: 50px;
 		line-height: 87px;
 		align-self: flex-end;
+		margin-bottom: 0;
 	}
+
+
+
 }
 
 
