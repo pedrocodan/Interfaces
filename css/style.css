@@ -5,6 +5,7 @@
 	text-decoration: none;
 	border: none;
 	outline: none;
+	font-family: 'Karla', sans-serif;
 }
 
 /* HEADER */
@@ -404,6 +405,384 @@ header input::placeholder {
     background-color: #1D1824;
 }
 
+html {
+	scroll-behavior:smooth;
+  }
+
+.paginaCuatroEnLinea{
+	background-color: #1D1824;
+}
+
+.myProgress {
+	width: 40%;
+	position: absolute;
+	bottom: 50%;
+	left: 30%;
+	border: #282D3D;
+	border-radius: 3px;
+	border: 3px solid #B71313;
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(5px);
+}
+  
+.myBar {
+	width: 1%;
+	height: 29px;
+	background-color: #E43434;
+ }
+
+.myProgress p{
+	position: absolute;
+	left: 50%;
+	color:#66009E;
+	font-size: larger;
+	background-color: transparent;
+}
+
+.borrar{
+	display:none;
+}
+
+.cuatroEnLinea{
+	display: flex;
+	justify-content: space-around;
+	padding-top: 5%;
+}
+
+.cuatroEnLinea>div{
+	width: 60%;
+	padding-left: 2%;
+}
+
+.cuatroEnLinea>div div img{
+	width: 100%;
+}
+
+.cuatroEnLinea div h4{
+	display: flex;
+	color: #fffefe;
+	background-color: #282D3D;
+	font-size: larger;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.cuatroEnLinea aside{
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	padding-right: 2%;
+}
+
+.cuatroEnLinea aside div img{
+	border-radius: 20px;
+	width: 100% ;
+	padding: 2%;
+
+}
+
+
+.cuatroEnLinea div footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-radius: 0px 0px 10px 10px;
+	background-color: #282D3D;
+	height: 50px;
+}
+
+.cuatroEnLinea div footer div{
+	display: flex;
+	align-items: center;
+	padding-right: 10px;
+	border-radius: 0px 0px 20px 20px;
+	background-color: #282D3D;
+}
+
+.cuatroEnLinea div footer{
+	justify-content: space-between;
+	flex-direction: row;
+	padding-left: 18px;
+}
+
+h3{
+	color: #fffefe;
+	font-size: medium;
+	padding-left: 5%;
+	padding-top: 5%;
+}
+
+
+
+.cuatroEnLinea div footer img{
+	height: 27px;
+	width: 27px;
+	background-color: #282D3D;
+}
+
+.cuatroEnLinea div footer div div:first-child{
+	position: relative;
+	width: auto;
+	justify-content: space-between;
+	border-radius: 9px;
+	padding: 4px;
+	bottom: 60px;
+	left: 75px;
+	
+}
+
+.cuatroEnLinea div footer div:nth-child(2) div:nth-child(2){
+	cursor: pointer;
+}
+
+.redes{
+	transform: translateX(-1000%);
+	transition: transform 0.5s ease;
+	bottom: 60px;
+	left: 5px;
+}
+
+.cuatroEnLinea div footer div div:first-child img{
+	padding: 4px;
+}
+
+.jugar{
+	position: absolute;
+	bottom:30%;
+	left: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3%;
+	width: 100px;
+	background-color: #BE53F9;
+	border-radius: 20px;
+	font-size: xx-large;
+	color: #fffefe;
+	transition: .3s ease all;
+	cursor: pointer;
+	overflow: hidden;
+}
+.jugar span{
+	position:absolute;
+	z-index: 2;
+	background-color: transparent;
+}
+
+.jugar::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #66009E;
+	position: absolute;
+	z-index: 1;
+	top: 100%;
+	left: 0;
+	transition: .3s ease-in-out all;
+}
+
+.jugar:hover::after {
+	top: 0;
+}
+
+.description {
+	padding-left: 6%;
+	padding-top: 3%;
+	width: 100%;
+}
+.description div:first-child{
+	display: flex;
+	align-items: center;
+}
+
+.description div h1{
+	color: #fffefe;
+	font-size: x-large;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.description div img{
+	padding-left: 30px;
+	height: 27px;
+	width: 27px;
+}
+
+.description div:nth-last-child(2) {
+	padding-top: 20px;
+}
+
+.description p {
+	color: #fffefe;
+	font-size: medium;
+	width: 80%;
+}
+
+
+.description .bold{
+	font-size: larger;
+}
+
+
+.formComentario{
+	padding: 3%;
+	color: #fffefe;
+	width: 30%;
+	
+}
+
+.formComentario h1{
+	background-color: #D497F5;
+	width: 97%;
+	height: 40px;
+	padding-left: 3%;
+	padding-top: 3%;
+	border-radius: 9px 9px 0px 0px;
+}
+
+.formComentario div {
+	display: flex;
+	background-color: #CECFD3;
+}
+
+.formComentario div h2{
+	background-color: transparent;
+	padding: 2%;
+}
+
+
+.formComentario div:last-child{
+	justify-content: space-between;
+	height: 40px;
+	border-radius: 0px 0px 9px 9px;
+}
+
+.formComentario>div:nth-child(2){
+	height: 100px;
+	width: 100%;
+}
+
+.formComentario div div img{
+	height: 27px;
+	background-color: transparent;
+}
+
+.formComentario div:last-child div:first-child{
+	padding-left: 5%;
+	border-radius: 9px 9px 9px 9px;
+}
+
+.formComentario div:last-child div:last-child{
+	width: auto;
+	padding-right: 5%;
+	
+}
+
+.comentarios{
+	width: 50%;
+	padding: 5%;
+	
+}
+
+.comentarios ul li h2, .comentarios ul li p, .comentarios ul li div {
+	background-color: #CECFD3;
+	padding: 10px;
+}
+
+.comentarios h1{
+	background-color: #BE53F9;
+	padding: 10px;
+	font-size: xx-large;
+	color: #fffefe;
+	border-radius: 9px 9px 0px 0px;
+}
+
+.comentarios ul hr{
+	height: 2px;
+	color: #000104;
+}
+
+.comentarios ul li div>img{
+	height: 27px;
+	background-color: transparent;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+
+.comentarios ul li div:first-child{
+	display: flex;
+	align-items: center;
+}
+
+.comentarios ul li:last-child div:last-child{
+	border-radius: 0px 0px 9px 9px;
+}
+
+.expUsuario{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.fatFooter{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	font-style: italic;
+	font-weight: lighter;
+	color: #fffefe;
+	font-size: medium;
+	background-color: #282D3D;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	
+}
+
+.fatFooter ul li:first-child{
+	font-size: larger;
+	font-weight: bold;
+	background-color: #282D3D;
+	padding-bottom: 5px;
+	padding-top: 20px;
+}
+
+.fatFooter ul img{
+	height: 27px;
+	background-color: transparent;
+	justify-content: end;
+	align-items: center;
+	padding: 3px;
+	cursor: pointer;
+}
+
+.fatFooter div{
+	background-color: #282D3D;
+	padding-top: 10px;
+}
+
+.fatFooter ul{
+	background-color: #282D3D;
+	padding-left: 2%;
+	padding-right: 2%;
+	align-items: center;
+}
+
+.fatFooter ul:last-child img:last-child{
+	position: relative;
+	top: 20%;
+	left: 60%;
+}
+
+.fatFooter ul li{
+	background-color: #282D3D;
+	padding-top: 5px;
+}
+
+
+
 @media screen and (min-width: 480px) {
     .section-portada {
         background-image: url(images/portada.jpg);
@@ -419,4 +798,16 @@ header input::placeholder {
         margin-right: 7%;
 
     }
+
+	.fatFooter{
+		flex-direction: row;
+		align-items: top;
+	  }
+
+	.fatFooter ul:last-child img:last-child, .fatFooter ul:first-child img{
+		top: 25%;
+		left: 0%;
+		right: 10%;
+	}
 }
+

@@ -8,104 +8,36 @@
     <title>Super Juegos</title>
 </head>
 <body>
-    <header class="grid-header">
-        <div class="header-a1">
-            <div class="divMenuHamburguesa">
-                <img class="menuHamburguesa" id="btn-menu" src="images/menuHamburguesa.png" alt="Logo Menu Hamburguesa">
-            </div>   
-            <div>
-                <img class="logoSuperJuegos" src="images/logoSuperJuegos.png" alt="Logo Super Juegos">
+    <div id="myProgress" class="myProgress">
+        <div id="myBar" class="myBar"></div>
+    </div>
+    <div id="paginaCargandoDeFondo">
+        <header class="grid-header">
+            <div class="header-a1">
+                <div class="divMenuHamburguesa">
+                    <img class="menuHamburguesa" id="btn-menu" src="images/menuHamburguesa.png" alt="Logo Menu Hamburguesa">
+                </div>   
+                <div>
+                    <img class="logoSuperJuegos" src="images/logoSuperJuegos.png" alt="Logo Super Juegos">
+                </div>
+                <div class="nombre">
+                    <p>Super Juegos</p> 
+                </div> 
+            </div>      
+            <div class="header-a2">
+                <div class="container-input">
+                    <input type="search" id="search" placeholder="Buscar "/>
+                    <img src="images/lupa.png" alt="Lupa">
+                </div>  
             </div>
-            <div class="nombre">
-                <p>Super Juegos</p> 
-            </div> 
-        </div>      
-        <div class="header-a2">
-            <div class="container-input">
-                <input type="search" id="search" placeholder="Buscar "/>
-                <img src="images/lupa.png" alt="Lupa">
-            </div>  
-        </div>
-        <div class="header-a3">
-            <div>
-                <img class="carritoCompras" src="images/shoppingcart.png" alt="Carrito de compras">
-            </div>   
-            <div id="btn-profile" class="userDiv">
-                <img class="user" src="images/user.png" alt="Usuario">
-            </div>
-            <ul id="nav-profile">
-                <li>
-                    <img src="images/profile.png" alt="Usuario">
-                    <span><a>Perfil</a></span>
-                </li>
-                <li>
-                    <img src="images/ajustes.png" alt="Ajustes">
-                    <span><a>Ajustes</a></span>
-                </li>
-                <li>
-                    <img src="images/cerrarsesion.png" alt="Botón de cerrar sesión">
-                    <span><a>Cerrar Sesión</a></span>
-                </li>
-                <li class="li-redes">
-                    <span class="redes">
-                        <img src="images/tik-tok.png" alt="Tik Tok">
-                        <img src="images/facebook.png" alt="Facebook">
-                        <img src="images/instagram.png" alt="Instagram">
-                    </span>
-                </li>
-            </ul> 
-        </div>
-        <nav id="nav">
-            <ul>
-                <li>
-                    <img src="images/corazon.png" alt="Corazón">
-                    <span><a>Favoritos</a></span>
-                </li>
-                <li>
-                    <img src="images/accion.png" alt="Llama">
-                    <span><a>Acción</a></span>
-                </li>
-                <li>
-                    <img src="images/autos.png" alt="Volante de auto">
-                    <span><a>Autos</a></span>
-                </li>
-                <li>
-                    <img src="images/escalador.png" alt="Escalador">
-                    <span><a>Aventura</a></span>
-                </li>
-                <li>
-                    <img src="images/belleza.png" alt="Tijera de barbaría">
-                    <span><a>Belleza</a></span>
-                </li>
-                <li>
-                    <img src="images/clasicos.png" alt="Gamepad">
-                    <span><a>Clásicos</a></span>
-                </li>
-                <li>
-                    <img src="images/deportes.png" alt="Pelota de Basquet">
-                    <span><a>Deportes</a></span>
-                </li>
-                <li>
-                    <img src="images/disparos.png" alt="Arco y flecha">
-                    <span><a>Disparos</a></span>
-                </li>
-                <li>
-                    <img src="images/estrategia.png" alt="Caballo de ajedrez">
-                    <span><a>Estrategia</a></span>
-                </li>
-                <li>
-                    <img src="images/nuevo.png" alt="Estrellas">
-                    <span><a>Nuevos</a></span>
-                </li>
-                <li>
-                    <img src="images/terror.png" alt="Mascara de terror">
-                    <span><a>Terror</a></span>
-                </li>
-                <li class="fin-categorias-li">
-                    <img src="images/multijugador.png" alt="Dos usuarios">
-                    <span class="fin-categorias"><a>2 Jugadores</a></span> 
-                </li>
-                <span class="li-user">
+            <div class="header-a3">
+                <div>
+                    <img class="carritoCompras" src="images/shoppingcart.png" alt="Carrito de compras">
+                </div>   
+                <div id="btn-profile" class="userDiv">
+                    <img class="user" src="images/user.png" alt="Usuario">
+                </div>
+                <ul id="nav-profile">
                     <li>
                         <img src="images/profile.png" alt="Usuario">
                         <span><a>Perfil</a></span>
@@ -113,10 +45,6 @@
                     <li>
                         <img src="images/ajustes.png" alt="Ajustes">
                         <span><a>Ajustes</a></span>
-                    </li>
-                    <li>
-                        <img src="images/shoppingcart.png" alt="Carrito de compras">
-                        <span><a>Carrito</a></span>
                     </li>
                     <li>
                         <img src="images/cerrarsesion.png" alt="Botón de cerrar sesión">
@@ -129,24 +57,99 @@
                             <img src="images/instagram.png" alt="Instagram">
                         </span>
                     </li>
-                </span>
-            </ul>
-        </nav>          
-    </header>
-    <div>
-        <section class="section-portada">
-            <h1>Próximamente</h1>
-            <div>
-                <button id="btn-avisame">Avísame</button>
-                <button id="btn-info">Más información</button>
+                </ul> 
             </div>
-        </section>
-        <section class="section-carruseles">
-            
-        </section>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <img src="images/corazon.png" alt="Corazón">
+                        <span><a>Favoritos</a></span>
+                    </li>
+                    <li>
+                        <img src="images/accion.png" alt="Llama">
+                        <span><a>Acción</a></span>
+                    </li>
+                    <li>
+                        <img src="images/autos.png" alt="Volante de auto">
+                        <span><a>Autos</a></span>
+                    </li>
+                    <li>
+                        <img src="images/escalador.png" alt="Escalador">
+                        <span><a>Aventura</a></span>
+                    </li>
+                    <li>
+                        <img src="images/belleza.png" alt="Tijera de barbaría">
+                        <span><a>Belleza</a></span>
+                    </li>
+                    <li>
+                        <img src="images/clasicos.png" alt="Gamepad">
+                        <span><a>Clásicos</a></span>
+                    </li>
+                    <li>
+                        <img src="images/deportes.png" alt="Pelota de Basquet">
+                        <span><a>Deportes</a></span>
+                    </li>
+                    <li>
+                        <img src="images/disparos.png" alt="Arco y flecha">
+                        <span><a>Disparos</a></span>
+                    </li>
+                    <li>
+                        <img src="images/estrategia.png" alt="Caballo de ajedrez">
+                        <span><a>Estrategia</a></span>
+                    </li>
+                    <li>
+                        <img src="images/nuevo.png" alt="Estrellas">
+                        <span><a>Nuevos</a></span>
+                    </li>
+                    <li>
+                        <img src="images/terror.png" alt="Mascara de terror">
+                        <span><a>Terror</a></span>
+                    </li>
+                    <li class="fin-categorias-li">
+                        <img src="images/multijugador.png" alt="Dos usuarios">
+                        <span class="fin-categorias"><a>2 Jugadores</a></span> 
+                    </li>
+                    <span class="li-user">
+                        <li>
+                            <img src="images/profile.png" alt="Usuario">
+                            <span><a>Perfil</a></span>
+                        </li>
+                        <li>
+                            <img src="images/ajustes.png" alt="Ajustes">
+                            <span><a>Ajustes</a></span>
+                        </li>
+                        <li>
+                            <img src="images/shoppingcart.png" alt="Carrito de compras">
+                            <span><a>Carrito</a></span>
+                        </li>
+                        <li>
+                            <img src="images/cerrarsesion.png" alt="Botón de cerrar sesión">
+                            <span><a>Cerrar Sesión</a></span>
+                        </li>
+                        <li class="li-redes">
+                            <span class="redes">
+                                <img src="images/tik-tok.png" alt="Tik Tok">
+                                <img src="images/facebook.png" alt="Facebook">
+                                <img src="images/instagram.png" alt="Instagram">
+                            </span>
+                        </li>
+                    </span>
+                </ul>
+            </nav>          
+        </header>
+        <div>
+            <section class="section-portada">
+                <h1>Próximamente</h1>
+                <div>
+                    <button id="btn-avisame">Avísame</button>
+                    <button id="btn-info">Más información</button>
+                </div>
+            </section>
+            <section class="section-carruseles">
+                
+            </section>
+        </div>
     </div>
-    <footer>
-    </footer>
     <script src="js/index.js"></script>
 </body>
 </html>
