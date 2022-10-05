@@ -373,6 +373,8 @@ header input::placeholder {
     margin-bottom: 5px;
     border-radius: 10px;
     color: #FFFEFE;
+    font-family: 'Manrope';
+    letter-spacing: 0.07em;
 }
 
 #btn-avisame {
@@ -388,17 +390,20 @@ header input::placeholder {
 
 
 .section-portada h1 {
-    text-transform: capitalize;
     color: #FFFEFE;
-    text-shadow: 0.5px 1px #FFFEFE;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0px 1px 3px #FFFEFE;
+    font-size: 25px;
+    letter-spacing: 0.09em;
+    margin-right: 1%;
+    margin-top: 1%;
+    font-family: 'Manrope';
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 50px;
     line-height: 87px;
     text-align: center;
-    letter-spacing: 0.09em;
-    margin-right: 10px;
+    text-transform: uppercase;
+    align-self: flex-end;
 }
 
 .section-carruseles {
@@ -736,8 +741,8 @@ h3{
 	color: #fffefe;
 	font-size: medium;
 	background-color: #282D3D;
-	padding-top: 3%;
-	padding-bottom: 3%;
+	padding-top: 2%;
+	padding-bottom: 2%;
 	
 }
 
@@ -746,7 +751,7 @@ h3{
 	font-weight: bold;
 	background-color: #282D3D;
 	padding-bottom: 5px;
-	padding-top: 20px;
+	padding-top: 2%;
 }
 
 .fatFooter ul img{
@@ -786,6 +791,7 @@ h3{
 @media screen and (min-width: 480px) {
     .section-portada {
         background-image: url(images/portada.jpg);
+        background-size: cover;
     }
 
     .section-portada div {
@@ -810,3 +816,213 @@ h3{
 	}
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CARRUSELES*/
+/* ---- ----- ----- Contenedor Titulos y Controles ----- ----- ----- */
+
+.section-carruseles * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.section-carruseles {
+    padding: 2% 0;
+}
+
+.section-carruseles .contenedor {
+	width: 96%;
+	margin: auto;
+}
+
+.contenedor-titulo-controles{
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #FFFEFE;
+	font-size: 20px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #CECFD3;
+	height: 2px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+	border-radius: 35px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background:#D497F5;
+}
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+
+.juegos-mostrados {
+	margin-bottom: 70px;
+}
+
+.juegos-mostrados .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+	margin: 0;
+}
+
+.juegos-mostrados .contenedor-principal .flecha-izquierda,
+.juegos-mostrados .contenedor-principal .flecha-derecha {
+	position: absolute;	
+	border: none;
+	background: rgba(0, 0, 0, 0.4);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 45px;
+	color: #FFFEFE;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+	border-radius: 10px;
+	padding: 0 3px;
+}
+
+.flecha-oculta {
+	display: none;
+}
+
+.juegos-mostrados .contenedor-principal .flecha-izquierda:hover,
+.juegos-mostrados .contenedor-principal .flecha-derecha:hover {
+	background:rgba(0, 0, 0, 0.9);
+}
+.juegos-mostrados .contenedor-principal .flecha-izquierda{
+	left: 0;
+}
+
+.juegos-mostrados .contenedor-principal .flecha-derecha{
+	right: 0;
+}
+
+/* ---- ----- ----- Carrusel ----- ----- ----- */
+
+.juegos-mostrados .contenedor-carrusel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.juegos-mostrados .contenedor-carrusel .carrusel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.juegos-mostrados .contenedor-carrusel .carrusel .juego {
+	min-width: 50%; /* Para tomar el tamaño de imagenes por pantalla */
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	border-radius: 9px;
+
+}
+
+.juegos-mostrados .contenedor-carrusel .carrusel .juego.hover {
+	/*ACA VA EL HOVER PARA CAMBIAR LA IMAGEN*/
+}
+
+.juegos-mostrados .contenedor-carrusel .carrusel .juego img {
+	width: 100%;
+	min-height: 100%;
+	vertical-align: top;
+	padding: 0 4px;
+	border-radius: 9px;
+	
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+
+@media screen and (min-width: 460px) {
+	.juegos-mostrados .contenedor-carrusel .carrusel .juego {
+		min-width: 20%;
+	}
+
+	.contenedor-titulo-controles .indicadores button {
+		width: 16px;
+	}
+
+}
