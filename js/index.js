@@ -34,7 +34,7 @@ function move() {
                 elem.appendChild(porcen);
                 elem.style.width = width + "%";
                 porcen.setAttribute("id", "porcentaje"+ (width));
-                document.getElementById("porcentaje" + (width-1)).classList.add("borrar");
+               // document.getElementById("porcentaje" + (width-1)).classList.add("borrar");
                 document.getElementById("paginaCargandoDeFondo").classList.add("borrar");
             }
         } 
@@ -44,52 +44,6 @@ var btnScrollTop = document.querySelector("#scrollToTop");
 btnScrollTop.addEventListener("click", () => {
     window.scrollTo(0,0);
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -139,14 +93,7 @@ flechaderecha.addEventListener('click', () => {
 
 const numeroPaginas = Math.ceil(juegos.length / 5);
 
-/*function renderImagenes(imagenesXGrupo) {
-    let pag = Math.ceil(juegos.length / imagenesXGrupo);
-    juegos.forEach(juego => {
-        let ul = document.createElement("div");
-        ul.classList.add("juego");
-        
-    });
-}*/
+
 
 for (let i = 0; i < numeroPaginas; i++) {
     const indicator = document.createElement('button');
@@ -156,7 +103,6 @@ for (let i = 0; i < numeroPaginas; i++) {
     }
 
     document.getElementById('indicadores-1').appendChild(indicator);
-
 
     indicator.addEventListener('click', (e) => {
         fila.scrollLeft = i * fila.offsetWidth;
@@ -173,16 +119,26 @@ juegos.forEach((juego) => {
             juegos.forEach(juego => juego.classList.remove('hover'));
             elemento.classList.add('hover');
 
-            console.log(elemento);
-        }, 100);
+            let imagen = elemento.querySelector('img');
+            if(!imagen.getAttribute('src').includes('_hover')) {
+                //Solo para desktop
+                //Reemplazamos la img sin hover por la con hover
+                let urlImgHover = imagen.getAttribute('src').replace('.','_hover.');
+                imagen.setAttribute('src',urlImgHover);
+            }
+        }, 200);
+    });
+
+    juego.addEventListener('mouseleave', (e) => {
+        const elemento = e.currentTarget;
+        setTimeout(() => {
+            elemento.classList.remove('hover');
+            let imagen = elemento.querySelector('img');
+            let urlImg = imagen.getAttribute('src').replaceAll('_hover','');
+            imagen.setAttribute('src', urlImg);
+        }, 200);
     });
 });
-
-fila.addEventListener('mouseleave', () => {
-    juegos.forEach(juego => juego.classList.remove('hover'));
-
-});
-
 
 // Adaptado para un id 2
 
@@ -230,14 +186,6 @@ flechaderecha2.addEventListener('click', () => {
 
 const numeroPaginas2 = Math.ceil(juegos2.length / 5);
 
-/*function renderImagenes(imagenesXGrupo) {
-    let pag = Math.ceil(juegos.length / imagenesXGrupo);
-    juegos.forEach(juego => {
-        let ul = document.createElement("div");
-        ul.classList.add("juego");
-        
-    });
-}*/
 
 for (let i = 0; i < numeroPaginas2; i++) {
     const indicator1 = document.createElement('button');
@@ -262,10 +210,72 @@ juegos2.forEach((juego) => {
         setTimeout(() => {
             juegos2.forEach(juego => juego.classList.remove('hover'));
             elemento.classList.add('hover');
-        }, 100);
+            
+            let imagen = elemento.querySelector('img');
+            if(!imagen.getAttribute('src').includes('_hover')) {
+                //Solo para desktop
+                //Reemplazamos la img sin hover por la con hover
+                let urlImgHover = imagen.getAttribute('src').replace('.','_hover.');
+                imagen.setAttribute('src',urlImgHover);
+            }
+        }, 200);
+    });
+
+    juego.addEventListener('mouseleave', (e) => {
+        const elemento = e.currentTarget;
+        setTimeout(() => {
+            //Removemos el hover cuando el mouse sale de la imagen, cambia la tarjeta 
+            elemento.classList.remove('hover');
+            
+            let imagen = juego.querySelector('img');
+            let urlImg = imagen.getAttribute('src').replaceAll('_hover','');
+            imagen.setAttribute('src', urlImg);
+        }, 200);
     });
 });
 
-fila2.addEventListener('mouseleave', () => {
-    juegos2.forEach(juego => juego.classList.remove('hover'));
-});
+
+
+
+const mediaQuery1 = window.matchMedia("(max-width: 450px)");
+const mediaQuery4 = window.matchMedia("(min-width: 451px)");
+
+function handleTabletChange1(e) {
+  if (e.matches) {
+    renderMobile();
+  }
+}
+  
+function handleTabletChange4(e) {
+    if (e.matches) {
+        renderDesktop();
+    }
+}
+
+// Register event listener
+mediaQuery1.addListener(handleTabletChange1);
+mediaQuery4.addListener(handleTabletChange4);
+
+function renderDesktop() {
+    let sectionCarruseles = document.querySelector('.section-carruseles');
+    let imagenes = sectionCarruseles.querySelectorAll('img');
+    imagenes.forEach(img => {
+        let src = img.getAttribute('src').replaceAll('_hover','');
+        img.setAttribute('src', src);
+    });
+}
+
+function renderMobile(){
+    let sectionCarruseles = document.querySelector('.section-carruseles');
+    let imagenes = sectionCarruseles.querySelectorAll('img');
+
+    imagenes.forEach(img => {
+        if(!img.getAttribute('src').includes('_hover')) {
+            let urlImgHover = img.getAttribute('src').replace('.','_hover.');
+            img.setAttribute('src',urlImgHover);
+        }
+    });
+}
+
+
+
