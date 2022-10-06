@@ -438,18 +438,18 @@ html {
 
 .cuatroEnLinea{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	padding-top: 3%;
+	
 }
 
 .cuatroEnLinea>div{
 	width: 60%;
-	padding-left: 2%;
+	padding-left: 3%;
 }
 
 .cuatroEnLinea>div>div img{
 	width: 100%;
-	min-height: 100%;
 }
 
 .cuatroEnLinea div h4{
@@ -467,7 +467,7 @@ html {
 	display: flex;
 	flex-direction: column;
 	width: 30%;
-	padding-right: 2%;
+	padding-right: 3%;
 }
 
 .cuatroEnLinea aside div img{
@@ -478,7 +478,7 @@ html {
 }
 
 
-.cuatroEnLinea div footer{
+.cuatroEnLinea div .footerJuego{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -487,7 +487,7 @@ html {
 	height: 50px;
 }
 
-.cuatroEnLinea div footer div{
+.cuatroEnLinea div .footerJuego div{
 	display: flex;
 	align-items: center;
 	padding-right: 10px;
@@ -495,7 +495,7 @@ html {
 	background-color: #282D3D;
 }
 
-.cuatroEnLinea div footer{
+.cuatroEnLinea div .footerJuego{
 	justify-content: space-between;
 	flex-direction: row;
 	padding-left: 18px;
@@ -510,13 +510,13 @@ h3{
 
 
 
-.cuatroEnLinea div footer img{
+.cuatroEnLinea div .footerJuego img{
 	height: 27px;
 	width: 27px;
 	background-color: #282D3D;
 }
 
-.cuatroEnLinea div footer div div:first-child{
+.cuatroEnLinea div .footerJuego div div:first-child{
 	position: relative;
 	width: auto;
 	justify-content: space-between;
@@ -527,7 +527,7 @@ h3{
 	
 }
 
-.cuatroEnLinea div footer div:nth-child(2) div:nth-child(2){
+.cuatroEnLinea div .footerJuego div:nth-child(2) div:nth-child(2){
 	cursor: pointer;
 }
 
@@ -538,14 +538,14 @@ h3{
 	left: 5px;
 }
 
-.cuatroEnLinea div footer div div:first-child img{
+.cuatroEnLinea div .footerJuego div div:first-child img{
 	padding: 4px;
 }
 
 
 .jugar{
 	position: absolute;
-	bottom:30%;
+	bottom:40%;
 	left: 40%;
 	display: flex;
 	justify-content: center;
@@ -628,7 +628,7 @@ h3{
 }
 
 .description {
-	padding-left: 6%;
+	padding-left: 3%;
 	padding-top: 3%;
 	width: 100%;
 }
@@ -667,10 +667,8 @@ h3{
 
 
 .formComentario{
-	padding: 6%;
+	padding-top: 6%;
 	color: #fffefe;
-	width: 30%;
-	
 }
 
 .formComentario h1{
@@ -712,6 +710,8 @@ h3{
 .formComentario div:last-child div:first-child{
 	padding-left: 5%;
 	border-radius: 9px 9px 9px 9px;
+	justify-content: space-between;
+	width: 30%;
 }
 
 .formComentario div:last-child div:last-child{
@@ -721,8 +721,7 @@ h3{
 }
 
 .comentarios{
-	width: 50%;
-	padding: 5%;
+	padding-top: 6%;
 	
 }
 
@@ -759,9 +758,31 @@ h3{
 	border-radius: 0px 0px 9px 9px;
 }
 
+.publicidad{
+	display: flex;
+	background-color: #4C4356;
+	margin-right: 4%;
+	margin-top: 4%;
+	color: #fffefe;
+	width: 90%;
+	border-radius: 9px;
+}
+
+.publicidad h2{
+	padding: 3%;
+}
+
+.comentariosYPublicidad{
+	display: flex;
+	flex-direction: row;
+	width: 90%;
+	padding-left: 3%;
+}
+
 .expUsuario{
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	padding-right: 3%;
 	justify-content: space-around;
 }
 
