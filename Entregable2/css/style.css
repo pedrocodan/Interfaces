@@ -53,13 +53,14 @@ header {
 }
 
 .nombre p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: normal;
-    letter-spacing: 0.07em;
-    color: #EFD8FC;
-    font-weight: 400;
-    font-size: 15px;
+	font-family: 'Barrio';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 36px;
     text-shadow: 0.5px 1.5px 1px #EFD8FC;
+	letter-spacing: 0.07em;
+	color: #EFD8FC;
 }
 
 header .header-a1 div {
@@ -216,7 +217,7 @@ header input::placeholder {
     max-width: 60%;
     max-height: 60%;
     position: absolute;
-    margin-left: 80%;
+    margin-left: 70%;
 }
 
 .nombre {
@@ -229,6 +230,10 @@ header input::placeholder {
 
 
 @media only screen and (min-width:480px) {
+
+	.header-a2 img {
+		margin-left: 80%;
+	}
     
     .header-a3, .nombre {
         visibility: visible;
@@ -791,23 +796,27 @@ h3{
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
-	font-style: italic;
 	font-weight: lighter;
 	color: #fffefe;
 	font-size: medium;
 	background-color: #282D3D;
 	padding-top: 2%;
 	padding-bottom: 2%;
-	
 }
 
-.fatFooter ul li:first-child{
+.fatFooter .fatFooter-category {
 	font-size: larger;
 	font-weight: bold;
 	background-color: #282D3D;
 	padding-bottom: 5px;
 	padding-top: 5%;
+	cursor: pointer;
 }
+
+.showCategory {
+	display: none;
+}
+
 
 .fatFooter ul img{
 	height: 27px;
@@ -840,6 +849,8 @@ h3{
 .fatFooter ul li{
 	background-color: #282D3D;
 	padding-top: 5px;
+	display: flex;
+	justify-content: center;
 }
 
 .fatFooter ul:nth-child(4) {
@@ -848,6 +859,15 @@ h3{
 
 
 @media screen and (min-width: 480px) {
+
+	.fatFooter ul li {
+		justify-content: flex-start;
+	}
+
+	.fatFooter span {
+		display: block;
+	}
+
     .section-portada {
         background-image: url(images/portada.jpg);
         background-size: cover;
@@ -902,78 +922,6 @@ h3{
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*CARRUSELES*/
 /* ---- ----- ----- Contenedor Titulos y Controles ----- ----- ----- */
@@ -1070,7 +1018,7 @@ h3{
 
 .juegos-mostrados .contenedor-carrusel {
 	width: 100%;
-	padding: 15px 0;
+	padding: 20px 0;
 	overflow: hidden;
 	scroll-behavior: smooth;
 }
