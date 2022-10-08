@@ -6,7 +6,71 @@
 	border: none;
 	outline: none;
 	font-family: 'Karla', sans-serif;
+
 }
+
+
+/*LOADER*/
+
+
+
+.loader {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #ce4233;
+    letter-spacing: 5.5px;
+  }
+
+
+
+.loader p{
+  position: relative;
+  bottom: 5px;
+  font-family: helvetica, arial, sans-serif;
+}
+  
+  .loader::before, .loader::after {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      background: #ce4233;
+      position: absolute;
+      animation: load .7s infinite alternate ease-in-out;
+    }
+    
+    .loader::before {
+      top: 0;
+    }
+    
+    .loader::after {
+      bottom: 0;
+    }
+  
+  @keyframes load {
+    0% { left: 0; height: 30px; width: 15px }
+    50% { height: 8px; width: 40px }
+    100% { left: 235px; height: 30px; width: 15px}
+  }
+
+.main{
+  opacity: 0;
+  display: none;
+  transition: opacity 1s ease-in ;
+}
+
+
+/*************************/
+
+
 
 /* HEADER */
 header {
@@ -418,31 +482,7 @@ html {
 	background-color: #1D1824;
 }
 
-.myProgress {
-	width: 40%;
-	position: absolute;
-	bottom: 50%;
-	left: 30%;
-	border: #282D3D;
-	border-radius: 3px;
-	border: 3px solid #B71313;
-	background-color: rgba(255, 255, 255, 0.4);
-	backdrop-filter: blur(5px);
-}
-  
-.myBar {
-	width: 1%;
-	height: 29px;
-	background-color: #E43434;
- }
 
-.myProgress p{
-	position: absolute;
-	left: 50%;
-	color:#66009E;
-	font-size: larger;
-	background-color: transparent;
-}
 
 .borrar{
 	display:none;
