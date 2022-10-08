@@ -12,6 +12,7 @@ document.getElementById('btn-profile').addEventListener('click', () => {
 var i = 0;
 window.onload = move();
 
+
 function move() {
     if (i == 0) {
         i = 1;
@@ -26,7 +27,7 @@ function move() {
                 document.getElementById("myProgress").classList.add("borrar");
                 document.getElementById("paginaCargandoDeFondo").classList.remove("borrar");
             } else {
-
+                
                 width++;
                 var porcen = document.createElement("p");
                 var text = document.createTextNode(width + "%");
@@ -36,10 +37,12 @@ function move() {
                 porcen.setAttribute("id", "porcentaje"+ (width));
                 document.getElementById("porcentaje" + (width-1)).classList.add("borrar");
                 document.getElementById("paginaCargandoDeFondo").classList.add("borrar");
+                
             }
         } 
     }
 }
+
 var btnScrollTop = document.querySelector("#scrollToTop");
 btnScrollTop.addEventListener("click", () => {
     window.scrollTo(0,0);
