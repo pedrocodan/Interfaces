@@ -203,7 +203,13 @@ function handleTabletChange4(e) {
     }
 }
 
-renderIndicadores(5);
+if (window.matchMedia("(min-width: 451px)").matches){
+    renderIndicadores(5);
+} else {
+    renderIndicadores(2);
+}
+
+//renderIndicadores(5);
 generarFlechas();
 renderHovers();
 
@@ -221,7 +227,8 @@ console.log(footer_menu);
 
 for (var i = 0; i < footer_menu.length; i++) {
     footer_menu[i].addEventListener('click', (e) => {
-        e.target.firtChild.classList.toggle('showCategory');
+        e.currentTarget.parentNode.querySelector('span').classList.toggle('showCategory');     
     });
-
 }
+
+
