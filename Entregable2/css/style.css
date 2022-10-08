@@ -401,6 +401,13 @@ header input::placeholder {
 
 .section-carruseles {
     background-color: #1D1824;
+	padding: 8% 0;
+}
+
+@media screen and (min-width:480px) {
+	.section-carruseles {
+		padding: 3% 0;
+	}
 }
 
 html {
@@ -929,9 +936,7 @@ h3{
 	box-sizing: border-box;
 }
 
-.section-carruseles {
-    padding: 2% 0;
-}
+
 
 .section-carruseles .contenedor {
 	width: 96%;

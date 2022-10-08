@@ -97,6 +97,9 @@ function generarFlecha(id) {
 function generarFlechas() {
     generarFlecha(1);
     generarFlecha(2);
+    generarFlecha(3);
+    generarFlecha(4);
+    generarFlecha(5);
 }
 
 function renderIndicador(id, imagenesXpagina) {
@@ -126,6 +129,9 @@ function renderIndicador(id, imagenesXpagina) {
 function renderIndicadores (imagenesXpagina){
     renderIndicador(1, imagenesXpagina);
     renderIndicador(2, imagenesXpagina);
+    renderIndicador(3, imagenesXpagina);
+    renderIndicador(4, imagenesXpagina);
+    renderIndicador(5, imagenesXpagina);
 }
 
 function renderHover (id) {
@@ -163,6 +169,9 @@ function renderHover (id) {
 function renderHovers() {
     renderHover(1);
     renderHover(2);
+    renderHover(3);
+    renderHover(4);
+    renderHover(5);
 }
 
 function renderDesktop() {
