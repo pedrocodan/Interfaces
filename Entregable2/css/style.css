@@ -1415,6 +1415,7 @@ main .lanzamiento-end-text h3{
 }
 
 .lanzamiento-pubg-info h1{
+    padding-top: 40px;
     font-size: 45px;
     padding-left: 15px;
     padding-bottom: 10px;
