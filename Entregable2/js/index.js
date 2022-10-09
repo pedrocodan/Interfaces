@@ -50,7 +50,7 @@ btnScrollTop.addEventListener("click", () => {
 
 
 
-/*CARRUSELES */// Adaptado para un id 1
+/*CARRUSELES */// 
 
 function generarFlecha(id) {
     var flechaizquierda = document.getElementById('flecha-izquierda-' + id);
