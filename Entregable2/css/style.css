@@ -684,7 +684,7 @@ h3{
 .description {
 	padding-left: 3%;
 	padding-top: 3%;
-	width: 100%;
+	width: 97%;
 }
 .description div:first-child{
 	display: flex;
@@ -711,7 +711,7 @@ h3{
 .description p {
 	color: #fffefe;
 	font-size: medium;
-	width: 80%;
+	width: 90%;
 }
 
 
@@ -815,7 +815,7 @@ h3{
 .publicidad{
 	display: flex;
 	background-color: #4C4356;
-	margin-right: 4%;
+	margin-right: 2%;
 	margin-top: 3%;
 	color: #fffefe;
 	width: 90%;
@@ -829,7 +829,7 @@ h3{
 .comentariosYPublicidad{
 	display: flex;
 	flex-direction: row;
-	width: 90%;
+	width: 95%;
 	padding-left: 3%;
 }
 
