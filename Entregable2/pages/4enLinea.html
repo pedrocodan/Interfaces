@@ -8,13 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Arcos vs Flechas</title>
+    <title>Arcos vs Espadas</title>
 </head>
 <body>
-    <div id="myProgress" class="myProgress">
-        <div id="myBar" class="myBar"></div>
+    <div class="loader-container">
+        <div class="loader">
+            <p>Cargando...</p>
+            <p class="porcentaje">1%</p>
+        </div>
     </div>
-    <div id="paginaCargandoDeFondo" class="paginaCuatroEnLinea">
+    <div class="main">
         <header class="grid-header">
             <div class="header-a1">
                 <div class="divMenuHamburguesa">
@@ -140,12 +143,12 @@
                 </ul>
             </nav>          
         </header>
-        <h3> Juegos > Recientes > Arcos vs Flechas</h4>
+        <h3> Juegos > Recientes > Arcos vs Espadas</h4>
         <section class="cuatroEnLinea">
             
             <div><!--acá adentro va el cuadro del juego-->
                 <h4>
-                    Arcos vs Flechas
+                    Arcos vs Espadas
                 </h4>
                 <div><img src="../images/4enLinea.png" alt="">
                     <a href="" type="button" class="jugar"><span>Jugar</span>
@@ -447,5 +450,6 @@
 
     <script src="../js/cuatroEnLinea.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/loader.js"></script>
 </body>
 </html>
