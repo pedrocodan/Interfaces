@@ -89,7 +89,7 @@ function renderHover (id) {
                 if(!imagen.getAttribute('src').includes('_hover')) {
                     //Solo para desktop
                     //Reemplazamos la img sin hover por la con hover
-                    let urlImgHover = imagen.getAttribute('src').replace('.','_hover.');
+                    let urlImgHover = imagen.getAttribute('src').replace('.png','_hover.png');
                     imagen.setAttribute('src',urlImgHover);
                 }
             }, 200);
