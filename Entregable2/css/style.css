@@ -816,6 +816,9 @@ h3{
 
 .publicidad{
 	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 	background-color: #4C4356;
 	margin-right: 2%;
 	margin-top: 3%;
@@ -825,7 +828,8 @@ h3{
 }
 
 .publicidad img{
-	width: 95%;
+	width: 50%;
+    height: 50%;
     padding: 3%;
 }
 
