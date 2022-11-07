@@ -491,8 +491,7 @@ html {
 .cuatroEnLinea{
 	display: flex;
 	justify-content: space-between;
-	padding-top: 3%;
-	
+    padding-top: 1%;	
 }
 
 .cuatroEnLinea>div{
@@ -526,7 +525,6 @@ html {
     border-radius: 20px;
     width: 100%;
     padding-bottom: 1%;
-
 }
 
 
@@ -555,11 +553,15 @@ html {
 	padding-left: 18px;
 }
 
-h3{
+h3 a{
 	color: #fffefe;
 	font-size: medium;
-	padding-left: 5%;
-	padding-top: 3%;
+}
+
+h3 {
+    color: #fffefe;
+    padding-left: 3%;
+    padding-top: 3%;
 }
 
 
@@ -567,7 +569,6 @@ h3{
 .cuatroEnLinea div .footerJuego img{
 	height: 27px;
 	width: 27px;
-	background-color: #282D3D;
 }
 
 .cuatroEnLinea div .footerJuego div div:first-child{
@@ -818,8 +819,10 @@ h3{
 	margin-right: 2%;
 	margin-top: 3%;
 	color: #fffefe;
-	width: 90%;
 	border-radius: 9px;
+    background-image: url(../css/images/images/bannerPublicidad.jpg);
+    background-size: cover;
+    min-width: 385px;
 }
 
 .publicidad h2{
@@ -920,7 +923,7 @@ h3{
     .section-portada {
         background-image: url(images/portada.jpg);
         background-size: cover;
-			justify-content: space-between;
+		justify-content: space-between;
     }
  
 	.section-portada div {
@@ -1443,3 +1446,158 @@ main .lanzamiento-end-text h3{
 }
 
 
+/*-----------CANVAS--------*/
+
+.contenedor-juego-aside {
+    max-width: 753px;
+}
+
+.cuatroEnLinea aside div img {
+    max-width: 300px;
+    max-height: 193px;
+    filter: brightness(70%);
+}
+
+.flex-canvas {
+    width: 100%;
+    max-height: 491px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    margin-right: auto;
+}
+
+.flex-conf {  
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    border-width: 1px;
+    position: absolute;
+}
+
+select {
+    background-color: #FFFEFE;
+    border: none;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-size: 20px;
+    color: black; 
+    border: 2px solid #BE53F9;
+    border-radius: 15px;
+}
+
+.flex-conf button {
+    font-size: 20px;
+    padding: 16px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #BE53F9;
+    border-radius: 15px;
+}
+
+.reiniciar {
+    font-size: 16px;
+    padding: 14px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 1px solid #BE53F9;
+    border-radius: 15px;
+    align-self: flex-start;
+    position: absolute;
+    left: 3.2%;
+}
+
+
+button:hover {
+    background-color: #BE53F9;
+    color: white;
+}
+  
+select:hover {
+    background-color: #BE53F9;
+    color: white;
+}
+
+.ocultar {
+    visibility: hidden;
+}
+
+.mostrar{
+    visibility: visible;
+}
+
+.container-juego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: #BE53F9;
+    margin-bottom: 5px;
+    max-width: 750px;
+    max-height: 490px;
+    background-image: url('../css/images/images/4enLinea.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.footerJuego {
+    max-width: 736px;
+}
+
+.cuatroEnLinea div h3 {
+    max-width: 754px;
+}
+
+label {
+    color: white;
+    font-size: 22px;
+}
+
+.select-fichas select {
+    max-width: 90%;
+}
+
+.select-fichas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-fichas h1 {
+    color: whitesmoke;
+    margin: 5px;
+}
+
+#timer{
+    position: absolute;
+    top: 190px;
+    left: 340px;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.swal-icon img {
+    max-width: 19%;
+    max-height: 20%;
+}
