@@ -1,5 +1,13 @@
 "use strict"
 
+let menuBurger = document.getElementById('btn-menu');
+
+menuBurger.addEventListener('click', () => {
+    menuBurger.classList.toggle('active');
+    menuBurger.classList.toggle('not-active');
+    document.getElementsByClassName('divMenuHamburguesa').classList.toggle('nav-active');
+})
+
 document.getElementById('btn-menu').addEventListener('click', () => {
     document.getElementById('nav').classList.toggle('show');
 });
