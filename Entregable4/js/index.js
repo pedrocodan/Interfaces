@@ -5,11 +5,19 @@ let menuBurger = document.getElementById('btn-menu');
 menuBurger.addEventListener('click', () => {
     menuBurger.classList.toggle('active');
     menuBurger.classList.toggle('not-active');
-    document.getElementsByClassName('divMenuHamburguesa').classList.toggle('nav-active');
-})
-
+    document.getElementById('divMenuHamburguesa').classList.toggle('nav-active');
+    
+});
+let nav =  document.getElementById('nav');
 document.getElementById('btn-menu').addEventListener('click', () => {
-    document.getElementById('nav').classList.toggle('show');
+    nav.classList.toggle('show');
+    if(nav.classList.contains("site-nav-open")) {
+        nav.classList.remove("site-nav-open");
+        nav.classList.add("site-nav-closed");
+    } else {
+        nav.classList.remove("site-nav-closed");
+        nav.classList.add("site-nav-open");
+    }
 });
 
 document.getElementById('btn-profile').addEventListener('click', () => {
