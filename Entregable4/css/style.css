@@ -561,6 +561,7 @@ h3 a{
 h3 {
     color: #fffefe;
     padding-left: 3%;
+    padding-right: 3%;
     padding-top: 3%;
 }
 
@@ -1862,4 +1863,21 @@ nav li {
         opacity: 0;
         transform: translateX(-100%);
     }
+}
+
+
+#spritesheet {
+    width: 256px;
+    height: 256px;
+    margin: auto;
+    background: url('../css/images/spritesheet.png') repeat-x;
+    animation: walk .8s steps(6) infinite;
+    position: relative;
+    right: 10px;
+    bottom: 10px;
+}
+
+@keyframes walk {
+    0% { background-position: 0; }
+    100% { background-position: -1536px; }
 }
