@@ -17,3 +17,9 @@ function reveal() {
   }
   
   window.addEventListener("scroll", reveal);
+
+  window.addEventListener("scroll", function() {
+    let distance = window.scrollY
+    document.querySelector(".lanzamiento-inicio-pubg").style.transform = `translateY(${distance *0.66}px)`
+    document.querySelector(".lanzamiento-pubg-logo").style.transform = `translateY(${distance * (-0.3)}px)`
+  })

@@ -1136,11 +1136,15 @@ h3 {
     justify-content: space-between;
     background-image: url("../css/images/lanzamiento-wallpaper.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 800px;
+    background-size: 100% 800px;
+    background-attachment: fixed;
+    background-position: center;
 
 }
 
+.animate-me {
+    animation: bounceIn 3s ease-in-out;
+}
 
 
 main .lanzamiento-inicio-pubg{
