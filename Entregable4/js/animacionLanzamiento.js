@@ -1,5 +1,11 @@
 "use strict"
 
+const parallax = document.querySelector(".lanzamiento-main");
+window.addEventListener("scroll", function(){
+    let offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = offset * 0.1 + "px";
+})
+
 function reveal() {
     var reveals = document.querySelectorAll(".mapa-juego");
   
@@ -14,9 +20,9 @@ function reveal() {
             reveals[i].classList.remove("active");
         }
     }
-}
+  }
   
-window.addEventListener("scroll", reveal);
+  window.addEventListener("scroll", reveal);
 
   window.addEventListener("scroll", function() {
 
@@ -33,15 +39,3 @@ window.addEventListener("scroll", reveal);
         document.querySelector(".lanzamiento-inicio-pubg").style.opacity = 1;
     }
   })
-
-
-document.addEventListener("DOMContentLoaded", function(event) {
-    console.clear();
-    ScrollOut({
-      cssProps: {
-        visibleY: true,
-        viewportY: true,
-        scrollPercentY: true
-      },
-      threshold:0.2});
-});
