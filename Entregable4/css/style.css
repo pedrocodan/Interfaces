@@ -1471,16 +1471,16 @@ main .lanzamiento-end-text h3{
     align-items: center;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 
-.lanzamiento-pubg-info-description p{
+.lanzamiento-pubg-info p{
     font-size: 30px;
     letter-spacing: 1px;
 }
 
-.lanzamiento-pubg-info-description img{
+.lanzamiento-pubg-info img {
     width: 350px;
     height: 200px;
     border-radius: 10px;
@@ -1881,3 +1881,4 @@ nav li {
     0% { background-position: 0; }
     100% { background-position: -1536px; }
 }
+

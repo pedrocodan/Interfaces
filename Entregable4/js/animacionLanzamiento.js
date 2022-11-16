@@ -14,12 +14,24 @@ function reveal() {
             reveals[i].classList.remove("active");
         }
     }
-  }
+}
   
-  window.addEventListener("scroll", reveal);
+window.addEventListener("scroll", reveal);
 
-  window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function() {
     let distance = window.scrollY
     document.querySelector(".lanzamiento-inicio-pubg").style.transform = `translateY(${distance *0.66}px)`
     document.querySelector(".lanzamiento-pubg-logo").style.transform = `translateY(${distance * (-0.3)}px)`
-  })
+})
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    console.clear();
+    ScrollOut({
+      cssProps: {
+        visibleY: true,
+        viewportY: true,
+        scrollPercentY: true
+      },
+      threshold:0.2});
+});
