@@ -2,6 +2,19 @@
 
 let menuBurger = document.getElementById('btn-menu');
 
+
+window.addEventListener("scroll", function(){
+    var header = document.querySelector("header");
+    var nav = document.querySelector("nav");
+    var cruz = document.querySelector("#span");
+    header.classList.toggle("scrolling", window.scrollY>0);
+    nav.classList.toggle("scrolling",window.scrollY>0);
+    cruz.classList.toggle("scrolling",window.scrollY>0 );
+    
+})
+
+
+
 menuBurger.addEventListener('click', () => {
     menuBurger.classList.toggle('active');
     menuBurger.classList.toggle('not-active');
@@ -225,4 +238,6 @@ for (var i = 0; i < footer_menu.length; i++) {
     });
 }
 
+
+//HEADER STICKY
 
