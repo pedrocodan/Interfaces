@@ -9,7 +9,7 @@ window.addEventListener("scroll", function(){
     var cruz = document.querySelector("#span");
     header.classList.toggle("scrolling", window.scrollY>0);
     nav.classList.toggle("scrolling",window.scrollY>0);
-    cruz.classList.toggle("scrolling",window.scrollY>0 );
+    //cruz.classList.toggle("scrolling",window.scrollY>0 );
     
 })
 
