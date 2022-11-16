@@ -1140,13 +1140,16 @@ h3 {
     background-size: 100% 800px;
     background-attachment: fixed;
     background-position: center;
-
+    opacity: 1;
 }
 
-.animate-me {
-    animation: bounceIn 3s ease-in-out;
+.lanzamiento-main-div{
+    background-image: url("../css/images/humo2.png");
+    background-repeat: no-repeat;
+    size: 100%;
+    background-attachment: fixed;
+    background-position: bottom;
 }
-
 
 main .lanzamiento-inicio-pubg{
     display: flex;
