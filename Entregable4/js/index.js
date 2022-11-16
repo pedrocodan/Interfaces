@@ -1,7 +1,7 @@
 "use strict"
 
 let menuBurger = document.getElementById('btn-menu');
-
+let cruz = document.getElementById('cruz');
 
 window.addEventListener("scroll", function(){
     var header = document.querySelector("header");

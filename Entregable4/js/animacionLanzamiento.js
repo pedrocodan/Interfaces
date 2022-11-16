@@ -32,7 +32,7 @@ function reveal() {
     if(distance>0){
         document.querySelector(".lanzamiento-inicio-pubg").style.transform = `translateY(${distance *0.66}px)`;
         document.querySelector(".lanzamiento-pubg-logo").style.transform = `translateY(${distance * (-0.3)}px)`;
-        document.querySelector(".lanzamiento-main-div").style.transform = `translateY(0px)`;
+        //document.querySelector(".lanzamiento-main-div").style.transform = `translateY(0px)`;
         document.querySelector(".lanzamiento-inicio-pubg").style.opacity = opacidadActual*0.95;   
     }
     if (distance>800){

@@ -1528,6 +1528,7 @@ main .lanzamiento-end-text h3{
     color: white;
     background-color: #1D1824 ;
     font-weight: lighter;
+    padding-bottom: 0px;
 }
 
 .lanzamiento-pubg-info h1{
@@ -1542,7 +1543,7 @@ main .lanzamiento-end-text h3{
     align-items: center;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
 }
 
 
@@ -1800,19 +1801,6 @@ label {
     }
 }
 
-.active span:nth-child(1).scrolling {
-    animation: ease .1s top-scroll forwards;
-}
-
-@keyframes top-scroll {
-   
-    100% {
-      top: 13px;
-      transform: rotate(45deg);
-      max-width: 40px;
-    }
-}
-
 @keyframes top-2 {
     0% {
       top: 22px;
@@ -1866,6 +1854,10 @@ label {
     100% {
       transform: scale(0);
     }
+}
+
+#cruz {
+    top: 13px;
 }
   
 @keyframes scaled-2 {
