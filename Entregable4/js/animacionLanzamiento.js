@@ -6,18 +6,36 @@ window.addEventListener("scroll", function(){
     parallax.style.backgroundPositionY = offset * 0.1 + "px";
 })
 
+
 function reveal() {
     var reveals = document.querySelectorAll(".mapa-juego");
-  
+
+
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
         var elementVisible = 150;
     
         if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
+            reveals[i].classList.add("active");//clase que hace efecto de entrada
+            reveals[i].classList.remove("goodbye");//clase que hace efecto de irse
+            if (i%2==0){
+                reveals[i].classList.add("fade-left");
+                reveals[i].classList.remove("bye-left");
+            }else{
+                reveals[i].classList.add("fade-right");
+                reveals[i].classList.remove("bye-right");
+            }
         } else {
-            reveals[i].classList.remove("active");
+            reveals[i].classList.remove("active");//clase que hace efecto de entrada
+            reveals[i].classList.add("goodbye");//clase que hace efecto de irse
+            if (i%2==0){
+                reveals[i].classList.remove("fade-left");
+                reveals[i].classList.add("bye-left");
+            }else{
+                reveals[i].classList.remove("fade-right");
+                reveals[i].classList.add("bye-right");
+            }
         }
     }
   }

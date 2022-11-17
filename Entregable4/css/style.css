@@ -1428,7 +1428,7 @@ main .lanzamiento-end-text h3{
 .active.fade-right {
     animation: fade-right 1s ease-in;
 }
-  
+
 @keyframes fade-right {
     0% {
         transform: translateX(300px);
@@ -1439,9 +1439,11 @@ main .lanzamiento-end-text h3{
         opacity: 1;
     }
 }
+  
 .active.fade-left {
     animation: fade-left 1s ease-in;
 }
+
 @keyframes fade-left {
     0% {
         transform: translateX(-300px);
@@ -1452,6 +1454,37 @@ main .lanzamiento-end-text h3{
         opacity: 1;
     }
 }
+
+.goodbye.bye-right{
+    animation: bye-right 1s ease-in
+}
+
+@keyframes bye-right {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(300px);
+        opacity: 0;
+    }
+}
+
+.goodbye.bye-left{
+    animation: bye-left 1s ease-in
+}
+
+@keyframes bye-left {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+}
+
 
 /*CARRUSEL*/
 .lanzamiento-slider{
