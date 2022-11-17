@@ -176,7 +176,7 @@ window.addEventListener("scroll", function(){
     parallax.style.backgroundPositionY = offset * 0.1 + "px";
 })
 
-
+/* ENTRADA DE IMAGENES POR LOS COSTADOS */ 
 function reveal() {
     var reveals = document.querySelectorAll(".mapa-juego");
 
@@ -184,8 +184,8 @@ function reveal() {
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 150;
-    
+        var elementVisible = 240;
+        
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");//clase que hace efecto de entrada
             reveals[i].classList.remove("goodbye");//clase que hace efecto de irse
