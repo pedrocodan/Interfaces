@@ -235,46 +235,46 @@ function reveal() {
   /* título dinámico galería de personajes */
 
 var titulo = document.querySelector("#titulo-personajes");
+var tarjetapj = document.querySelectorAll(".lanzamiento-slide");
 titulo.style.opacity = 0.1;
-var personajes = document.querySelector(".lanzamiento-slide-track");
-personajes.style.opacity = 0.1;
 var distance=0;
 var movimiento = 30
 titulo.style.transform = `translateY(-${movimiento}px)`;
 personajes.style.transform = `translateY(${movimiento}px)`;
+tarjetapj.forEach(pj => {
+    pj.style.transform = `translateY(${movimiento}px)`;
+    pj.style.opacity = 0.1;
+});
 window.addEventListener("scroll", function(){
     var windowHeight = window.innerHeight;
     var elementTop = titulo.getBoundingClientRect().top;
     var elementVisible = 300;
     var distanceNow = window.scrollY;
 
-    //console.log(titulo.style.opacity,titulo.style.transform) 
-
-    if(elementTop < (windowHeight - elementVisible) && titulo.style.opacity<1 && distanceNow>distance){    
+    if(elementTop < (windowHeight - elementVisible) && titulo.style.opacity<1 && distanceNow>distance && movimiento>0){    
         titulo.style.opacity = titulo.style.opacity*1.2;
         titulo.style.transform = `translateY(-${movimiento}px)`;
-        personajes.style.opacity = personajes.style.opacity * 1.2;
-        personajes.style.transform = `translateY(${movimiento}px)`;
-        movimiento = movimiento -1.5;
-    }else if (elementTop > (windowHeight - elementVisible) && distanceNow<distance && titulo.style.opacity>0.2){
+        tarjetapj.forEach(pj => {
+            pj.style.transform = `translateY(${movimiento}px)`;
+            pj.style.opacity = pj.style.opacity * 1.2;
+        });
+        
+        movimiento = movimiento -2;
+    }else if (elementTop > (windowHeight - elementVisible) && distanceNow<distance && titulo.style.opacity>0.1){
         titulo.style.opacity = titulo.style.opacity*0.9;
         titulo.style.transform = `translateY(-${movimiento}px)`;
-        personajes.style.opacity = personajes.style.opacity * 0.9;
-        personajes.style.transform = `translateY(${movimiento}px)`;
-        movimiento = movimiento +1.5;
+        tarjetapj.forEach(pj => {
+            pj.style.transform = `translateY(${movimiento}px)`;
+            pj.style.opacity = pj.style.opacity * 0.9;
+        });
+        
+        movimiento = movimiento +2;
     }
-    console.log(personajes.style.transform,titulo.style.transform)
+
+    if (movimiento>30){
+        movimiento = 30;
+    }
+    
     distance=distanceNow;
     
 })
-
-/* if(distance>2000 && distance<2100){
-        console.log(titulo.style.opacity, titulo.style.elementTop) 
-        titulo.style.opacity = titulo.style.opacity*1.1;
-        titulo.style.transform = `translateY(${titulo.style.offsetHeight * 0.06}px)`
-        personajes.style.opacity += 0.05;
-        personajes.style.transform = `translateY(- ${personajes.style.offsetHeight * 0.06}px)`
-    } else if (distance<2000 && distance>1900){
-        titulo.style.opacity = titulo.style.opacity*0.5;
-        titulo.style.transform = `translateY(${titulo.style.offsetHeight * 0.06}px)`
-    }*/
