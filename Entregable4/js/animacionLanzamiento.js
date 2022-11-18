@@ -216,6 +216,8 @@ function reveal() {
 
     let distance = window.scrollY;
     let opacidadActual = document.querySelector(".lanzamiento-inicio-pubg").style.opacity
+    document.querySelector(".lanzamiento-inicio-pubg").style.transform = `translateY(${distance *0.66}px)`;
+    document.querySelector(".lanzamiento-pubg-logo").style.transform = `translateY(${distance * (-0.3)}px)`;
     document.querySelector(".lanzamiento-inicio-pubg").style.opacity =1
     if(distance>0){
         document.querySelector(".lanzamiento-inicio-pubg").style.transform = `translateY(${distance *0.66}px)`;
@@ -229,3 +231,50 @@ function reveal() {
   })
 
 
+
+  /* título dinámico galería de personajes */
+
+var titulo = document.querySelector("#titulo-personajes");
+titulo.style.opacity = 0.1;
+var personajes = document.querySelector(".lanzamiento-slide-track");
+personajes.style.opacity = 0.1;
+var distance=0;
+var movimiento = 30
+titulo.style.transform = `translateY(-${movimiento}px)`;
+personajes.style.transform = `translateY(${movimiento}px)`;
+window.addEventListener("scroll", function(){
+    var windowHeight = window.innerHeight;
+    var elementTop = titulo.getBoundingClientRect().top;
+    var elementVisible = 300;
+    var distanceNow = window.scrollY;
+
+    //console.log(titulo.style.opacity,titulo.style.transform) 
+
+    if(elementTop < (windowHeight - elementVisible) && titulo.style.opacity<1 && distanceNow>distance){    
+        titulo.style.opacity = titulo.style.opacity*1.2;
+        titulo.style.transform = `translateY(-${movimiento}px)`;
+        personajes.style.opacity = personajes.style.opacity * 1.2;
+        personajes.style.transform = `translateY(${movimiento}px)`;
+        movimiento = movimiento -1.5;
+    }else if (elementTop > (windowHeight - elementVisible) && distanceNow<distance && titulo.style.opacity>0.2){
+        titulo.style.opacity = titulo.style.opacity*0.9;
+        titulo.style.transform = `translateY(-${movimiento}px)`;
+        personajes.style.opacity = personajes.style.opacity * 0.9;
+        personajes.style.transform = `translateY(${movimiento}px)`;
+        movimiento = movimiento +1.5;
+    }
+    console.log(personajes.style.transform,titulo.style.transform)
+    distance=distanceNow;
+    
+})
+
+/* if(distance>2000 && distance<2100){
+        console.log(titulo.style.opacity, titulo.style.elementTop) 
+        titulo.style.opacity = titulo.style.opacity*1.1;
+        titulo.style.transform = `translateY(${titulo.style.offsetHeight * 0.06}px)`
+        personajes.style.opacity += 0.05;
+        personajes.style.transform = `translateY(- ${personajes.style.offsetHeight * 0.06}px)`
+    } else if (distance<2000 && distance>1900){
+        titulo.style.opacity = titulo.style.opacity*0.5;
+        titulo.style.transform = `translateY(${titulo.style.offsetHeight * 0.06}px)`
+    }*/
