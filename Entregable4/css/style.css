@@ -12,6 +12,11 @@
 
 /*LOADER*/
 
+body{
+
+    overflow-x: hidden;
+}
+
 
 
 .loader {
@@ -1205,6 +1210,56 @@ h3 {
     padding-top: 30px;					
 }
 
+
+.nube{
+    opacity: 0.6;
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+.nube:nth-child(1){
+    width: 1400px;
+    height: 800px;
+    background-image: url("../css/images/nube1.png");
+    animation: movimiento1 60s infinite;
+}
+.nube:nth-child(2){
+    width: 1100px;
+    height: 800px;
+    background-image: url("../css/images/nube1.png");
+    animation: movimiento1 100s infinite;
+}
+.nube:nth-child(3){
+
+    width: 1200px;
+    height: 800px;
+    background-image: url("../css/images/nube1.png");
+    animation: movimiento2 100s infinite;
+}
+.nube:nth-child(4){
+    width: 1400px;
+    height: 800px;
+    background-image: url("../css/images/nube1.png");
+    animation: movimiento2 60s infinite;
+}
+
+@keyframes movimiento1 {
+    from{
+        margin-left: 95%;
+    }
+    to{
+        margin-left: -30%;
+    }
+}
+
+@keyframes movimiento2{
+    from{
+        margin-left: -50%;
+    }
+    to{
+        margin-left: 100%;
+    }
+}
 
 /*MAIN*/
 .lanzamiento-main{

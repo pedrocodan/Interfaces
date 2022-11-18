@@ -5,13 +5,23 @@ let menuBurger = document.getElementById('btn-menu');
 let cruz = document.getElementById('cruz');
 
 window.addEventListener("scroll", function(){
+
+
     var header = document.querySelector("header");
     var nav = document.querySelector("nav");
-    var cruz = document.querySelector("#span");
+    var titulo = document.querySelector(".lanzamiento-inicio-pubg-h1");
+    var p = document.querySelector(".lanzamiento-inicio-pubg-p");
+    var btn = document.querySelector(".lanzamiento-inicio-pubg-btn");
+    
     header.classList.toggle("scrolling", window.scrollY>0);
     nav.classList.toggle("scrolling",window.scrollY>0);
-    //cruz.classList.toggle("scrolling",window.scrollY>0 );
-    
+    titulo.classList.toggle("scrolling",window.scrollY>0);
+
+    if(window.scrollY>0){
+        titulo.style.opacity = (1 - scrollY*2 / 250);
+        p.style.opacity = (1 - scrollY / 250);
+        btn.style.opacity = (1 - scrollY / 250);
+    }
 })
 
 menuBurger.addEventListener('click', () => {
@@ -212,23 +222,7 @@ function reveal() {
   
   window.addEventListener("scroll", reveal);
 
-  window.addEventListener("scroll", function() {
 
-    let distance = window.scrollY;
-    let opacidadActual = document.querySelector(".lanzamiento-inicio-pubg").style.opacity
-    document.querySelector(".lanzamiento-inicio-pubg").style.transform = `translateY(${distance *0.66}px)`;
-    document.querySelector(".lanzamiento-pubg-logo").style.transform = `translateY(${distance * (-0.3)}px)`;
-    document.querySelector(".lanzamiento-inicio-pubg").style.opacity =1
-    if(distance>0){
-        document.querySelector(".lanzamiento-inicio-pubg").style.transform = `translateY(${distance *0.66}px)`;
-        document.querySelector(".lanzamiento-pubg-logo").style.transform = `translateY(${distance * (-0.3)}px)`;
-        //document.querySelector(".lanzamiento-main-div").style.transform = `translateY(0px)`;
-        document.querySelector(".lanzamiento-inicio-pubg").style.opacity = opacidadActual*0.95;   
-    }
-    if (distance>800){
-        document.querySelector(".lanzamiento-inicio-pubg").style.opacity = 1;
-    }
-  })
 
 
 
