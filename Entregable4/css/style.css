@@ -2028,14 +2028,13 @@ nav li {
     top: 0;
     float: left;
     overflow: hidden;
-    width: 50%;
+    width: 45%;
     max-height: 400px;
+    margin-left: 3%;
   }
   
   .item .image-holder img {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+   
     border-radius: 15px;
     max-height: 300px;
     min-width: 600px;
@@ -2045,9 +2044,9 @@ nav li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
+    width: 45%;
     min-height: 35vh;
-    margin-left: 40%;
+    margin-left: 50%;
   }
   
   .scroll-reveal-section {
