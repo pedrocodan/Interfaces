@@ -240,7 +240,7 @@ titulo.style.opacity = 0.1;
 var distance=0;
 var movimiento = 30
 titulo.style.transform = `translateY(-${movimiento}px)`;
-personajes.style.transform = `translateY(${movimiento}px)`;
+
 tarjetapj.forEach(pj => {
     pj.style.transform = `translateY(${movimiento}px)`;
     pj.style.opacity = 0.1;
