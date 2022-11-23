@@ -19,8 +19,8 @@ window.addEventListener("scroll", function(){
 
     if(window.scrollY>0){
         titulo.style.opacity = (1 - scrollY*2 / 250);
-        p.style.opacity = (1 - scrollY / 250);
-        btn.style.opacity = (1 - scrollY / 250);
+        p.style.opacity = (1 - scrollY*2 / 250);
+        btn.style.opacity = (1 - scrollY*2 / 250);
     }
 })
 
@@ -272,3 +272,30 @@ window.addEventListener("scroll", function(){
     distance=distanceNow;
     
 })
+
+document.querySelector("#flecha-derecha-1").addEventListener("click", animationCardsLeft);
+document.querySelector("#flecha-izquierda-1").addEventListener("click", animationCardsLeft);
+
+const newspaperSpinning = [
+    { transform: 'rotate(0) scale(1)' },
+    { transform: 'rotate(360deg) scale(0)' }
+  ];
+
+const newspaperTiming = {
+    duration: 2000,
+    iterations: 1,
+}
+
+function animationCardsLeft(){
+    let cards = document.querySelectorAll(".juego");
+    cards.forEach(card => card.animate([
+        // keyframes
+        { transform: 'scale(1)'},
+        { transform: 'scale(0.5)'},
+        { transform: 'scale(1)' }
+      ], {
+        // timing options
+        duration: 500,
+        iterations: 1
+      })
+    )}
