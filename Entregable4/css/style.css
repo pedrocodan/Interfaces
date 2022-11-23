@@ -1339,6 +1339,7 @@ main .lanzamiento-end-text h3{
     letter-spacing: 0.5px;
     font-size: 30px;
 	text-shadow: 0.1em 0.1em 0.2em black;
+    padding-top: 0;
 }
 
 
@@ -1553,7 +1554,7 @@ main .lanzamiento-end-text h3{
     height: auto;
     margin: auto;
     overflow: hidden;
-    padding-top: 40px;
+    padding-top: 50px;
 }
 
 .lanzamiento-slider h1{

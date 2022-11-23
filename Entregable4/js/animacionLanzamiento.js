@@ -233,7 +233,7 @@ var tarjetapj = document.querySelectorAll(".lanzamiento-slide");
 titulo.style.opacity = 0.1;
 var distance=0;
 var movimiento = 30
-titulo.style.transform = `translateY(-${movimiento}px)`;
+titulo.style.transform = `translateY(-${movimiento*2}px)`;
 
 tarjetapj.forEach(pj => {
     pj.style.transform = `translateY(${movimiento}px)`;
@@ -247,7 +247,7 @@ window.addEventListener("scroll", function(){
 
     if(elementTop < (windowHeight - elementVisible) && titulo.style.opacity<1 && distanceNow>distance && movimiento>0){    
         titulo.style.opacity = titulo.style.opacity*1.2;
-        titulo.style.transform = `translateY(-${movimiento}px)`;
+        titulo.style.transform = `translateY(-${movimiento*2}px)`;
         tarjetapj.forEach(pj => {
             pj.style.transform = `translateY(${movimiento}px)`;
             pj.style.opacity = pj.style.opacity * 1.2;
@@ -256,7 +256,7 @@ window.addEventListener("scroll", function(){
         movimiento = movimiento -2;
     }else if (elementTop > (windowHeight - elementVisible) && distanceNow<distance && titulo.style.opacity>0.1){
         titulo.style.opacity = titulo.style.opacity*0.9;
-        titulo.style.transform = `translateY(-${movimiento}px)`;
+        titulo.style.transform = `translateY(-${movimiento*2}px)`;
         tarjetapj.forEach(pj => {
             pj.style.transform = `translateY(${movimiento}px)`;
             pj.style.opacity = pj.style.opacity * 0.9;
