@@ -299,3 +299,5 @@ function animationCardsLeft(){
         iterations: 1
       })
     )}
+
+   

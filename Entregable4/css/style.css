@@ -2079,6 +2079,7 @@ nav li {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), transparent 50px), linear-gradient(to top, rgba(0, 0, 0, 0.05), transparent 50px);
 }
 
+
 .item .image-holder {
     position: sticky;
     top: 0;
